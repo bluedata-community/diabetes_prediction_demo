@@ -2,7 +2,7 @@
 
 mvn package
 
-[[ -f target/db-demo-app-exec.jar ]] || echo "ERROR: Couldn't find target/db-demo-app-exec.jar"; exit 1
+[[ -f target/db-demo-app-exec.jar ]] || echo "ERROR: Couldn't find target/db-demo-app-exec.jar" && exit 1
 
 docker build -t snowch/db-demo .
 
