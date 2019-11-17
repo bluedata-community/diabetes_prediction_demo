@@ -12,7 +12,7 @@
   <groupId>com.foo</groupId>
   <artifactId>foo</artifactId>
   <version>1.0.0.BUILD-SNAPSHOT</version>
-  <name>foo</name>
+  <name>diabetes-app</name>
 
   <packaging>jar</packaging>
 

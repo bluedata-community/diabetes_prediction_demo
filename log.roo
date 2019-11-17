@@ -33,3 +33,4 @@ web mvc controller --all --responseType THYMELEAF
 web mvc controller --all --pathPrefix /api
 focus --class ~.domain.Consultation
 field date --fieldName consultationDate  --type java.util.Calendar --column CONSULTATION_DATE  --persistenceType JPA_TIMESTAMP
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log closed at 2019-11-17 22:31:39
