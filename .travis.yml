@@ -7,3 +7,9 @@ services:
 
 before_script:
   - docker build -t snowch/db-demo .
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
