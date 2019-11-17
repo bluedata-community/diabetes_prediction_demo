@@ -5,10 +5,6 @@ jdk:
 services:
   - docker
 
-after_script:
-  - mvn package
-  - docker build -t snowch/db-demo .
-
 deploy:
   provider: script
   script: bash docker_push
