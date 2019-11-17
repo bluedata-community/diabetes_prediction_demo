@@ -5,6 +5,10 @@ package com.foo.config.jackson;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.foo.config.jackson.DomainModelModule;
+import com.foo.domain.Consultation;
+import com.foo.domain.Patient;
+import com.foo.web.ConsultationJsonMixin;
+import com.foo.web.PatientJsonMixin;
 import org.springframework.boot.jackson.JsonComponent;
 
 privileged aspect DomainModelModule_Roo_DomainModelModule {
@@ -20,6 +24,8 @@ privileged aspect DomainModelModule_Roo_DomainModelModule {
     public DomainModelModule.new() {
         // Mixin registration
         
+        setMixInAnnotation(Consultation.class, ConsultationJsonMixin.class);
+        setMixInAnnotation(Patient.class, PatientJsonMixin.class);
     }
 
 }
