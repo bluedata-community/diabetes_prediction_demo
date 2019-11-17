@@ -5,5 +5,5 @@ jdk:
 services:
   - docker
 
-before_install:
+before_script:
   - docker build -t snowch/db-demo .
