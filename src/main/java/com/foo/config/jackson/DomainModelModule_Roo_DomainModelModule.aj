@@ -5,8 +5,6 @@ package com.foo.config.jackson;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.foo.config.jackson.DomainModelModule;
-import com.foo.domain.Timer;
-import com.foo.web.TimerJsonMixin;
 import org.springframework.boot.jackson.JsonComponent;
 
 privileged aspect DomainModelModule_Roo_DomainModelModule {
@@ -22,7 +20,6 @@ privileged aspect DomainModelModule_Roo_DomainModelModule {
     public DomainModelModule.new() {
         // Mixin registration
         
-        setMixInAnnotation(Timer.class, TimerJsonMixin.class);
     }
 
 }

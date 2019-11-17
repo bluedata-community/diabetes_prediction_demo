@@ -9,3 +9,6 @@ web mvc setup
 web mvc view setup --type THYMELEAF
 web mvc controller --all --responseType THYMELEAF
 web mvc controller --all --pathPrefix /api
+// Spring Roo UNKNOWN VERSION log opened at 2019-11-17 20:28:05
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-11-17 20:28:56
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log closed at 2019-11-17 20:34:56

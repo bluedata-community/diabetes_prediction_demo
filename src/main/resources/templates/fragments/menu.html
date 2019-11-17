@@ -29,22 +29,12 @@
               </div>
               <!-- Name application -->
               <div class="application-name navbar-brand hidden-xs">
-                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">foo</a>
+                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">DB-MP</a>
               </div>
 
             </div><!-- /navbar-header -->
 
             <div id="mainnav" class="navbar-collapse collapse">
-
-              <ul class="nav navbar-nav" id="entitiesMenuEntries">
-                <li class="dropdown" id="timer-entry" data-z="1702bf96">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_timer})}">Timer<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-	                   <li><a href="/timers/create-form" data-th-href="@{/timers/create-form}" data-th-utext="#{label_create_entity(#{label_timer})}">Create Timer</a></li>
-	                  <li><a href="/timers" data-th-href="@{/timers}" data-th-utext="#{label_list_entity(#{label_timer_plural})}">List Timer</a></li>
-                 </ul>
-                </li>
-              </ul>
 
               <!-- Language select -->
               <ul class="nav navbar-nav navbar-right upper-nav languages" data-th-replace="~{fragments/languages :: languages}">
