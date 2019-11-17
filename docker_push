@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mvn package
+cp .travis.settings.xml $HOME/.m2/settings.xml && mvn package
 
 [[ -f target/db-demo-app-exec.jar ]] || echo "ERROR: Couldn't find target/db-demo-app-exec.jar" && exit 1
 
