@@ -2,6 +2,8 @@
 
 mvn package
 
+[[ -f target/db-demo-app-exec.jar ]] || echo "ERROR: Couldn't find target/db-demo-app-exec.jar"; exit 1
+
 docker build -t snowch/db-demo .
 
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
