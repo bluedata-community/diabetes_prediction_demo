@@ -18,7 +18,7 @@
 
   <properties>
     <roo.version>2.0.0.RELEASE</roo.version>
-    <java.product.version>6</java.product.version>
+    <java.product.version>8</java.product.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <aspectj.plugin.version>1.8</aspectj.plugin.version>
     <asciidoclet.version>1.5.4</asciidoclet.version>
