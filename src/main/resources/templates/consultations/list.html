@@ -3,7 +3,7 @@
 
   <head id="head">
     <title data-th-text="#{label_list_entity(#{label_consultation_plural})}">
-    List Consultation - foo - SpringRoo Application</title>
+    List Consultation - diabetes-app - SpringRoo Application</title>
 
   </head>
 
@@ -34,6 +34,9 @@
                     <th data-data="id" data-checkboxes="true"></th>
                     <th data-data="patient" data-th-text="#{label_consultation_patient}">patient</th>
                     <th data-data="consultationDate" data-th-text="#{label_consultation_consultationdate}">consultationDate</th>
+                    <th data-data="pregnancies" data-th-text="#{label_consultation_pregnancies}">pregnancies</th>
+                    <th data-data="glucose" data-th-text="#{label_consultation_glucose}">glucose</th>
+                    <th data-data="bloodPressure" data-th-text="#{label_consultation_bloodpressure}">bloodPressure</th>
                     <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
                   </tr>
                 </thead>
@@ -42,6 +45,9 @@
                     <td></td>
                     <td>patient</td>
                     <td>consultationDate</td>
+                    <td>pregnancies</td>
+                    <td>glucose</td>
+                    <td>bloodPressure</td>
                     <td data-th-text="#{label_tools}">Tools</td>
                   </tr>
                 </tbody>

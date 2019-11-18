@@ -5,6 +5,7 @@ package com.foo.domain;
 
 import com.foo.domain.Consultation;
 import com.foo.domain.Patient;
+import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Objects;
 
@@ -91,6 +92,166 @@ privileged aspect Consultation_Roo_JavaBean {
     }
     
     /**
+     * Gets pregnancies value
+     * 
+     * @return Integer
+     */
+    public Integer Consultation.getPregnancies() {
+        return this.pregnancies;
+    }
+    
+    /**
+     * Sets pregnancies value
+     * 
+     * @param pregnancies
+     * @return Consultation
+     */
+    public Consultation Consultation.setPregnancies(Integer pregnancies) {
+        this.pregnancies = pregnancies;
+        return this;
+    }
+    
+    /**
+     * Gets glucose value
+     * 
+     * @return Integer
+     */
+    public Integer Consultation.getGlucose() {
+        return this.glucose;
+    }
+    
+    /**
+     * Sets glucose value
+     * 
+     * @param glucose
+     * @return Consultation
+     */
+    public Consultation Consultation.setGlucose(Integer glucose) {
+        this.glucose = glucose;
+        return this;
+    }
+    
+    /**
+     * Gets bloodPressure value
+     * 
+     * @return Integer
+     */
+    public Integer Consultation.getBloodPressure() {
+        return this.bloodPressure;
+    }
+    
+    /**
+     * Sets bloodPressure value
+     * 
+     * @param bloodPressure
+     * @return Consultation
+     */
+    public Consultation Consultation.setBloodPressure(Integer bloodPressure) {
+        this.bloodPressure = bloodPressure;
+        return this;
+    }
+    
+    /**
+     * Gets skinThickness value
+     * 
+     * @return Integer
+     */
+    public Integer Consultation.getSkinThickness() {
+        return this.skinThickness;
+    }
+    
+    /**
+     * Sets skinThickness value
+     * 
+     * @param skinThickness
+     * @return Consultation
+     */
+    public Consultation Consultation.setSkinThickness(Integer skinThickness) {
+        this.skinThickness = skinThickness;
+        return this;
+    }
+    
+    /**
+     * Gets insulin value
+     * 
+     * @return Integer
+     */
+    public Integer Consultation.getInsulin() {
+        return this.insulin;
+    }
+    
+    /**
+     * Sets insulin value
+     * 
+     * @param insulin
+     * @return Consultation
+     */
+    public Consultation Consultation.setInsulin(Integer insulin) {
+        this.insulin = insulin;
+        return this;
+    }
+    
+    /**
+     * Gets bmi value
+     * 
+     * @return BigDecimal
+     */
+    public BigDecimal Consultation.getBmi() {
+        return this.bmi;
+    }
+    
+    /**
+     * Sets bmi value
+     * 
+     * @param bmi
+     * @return Consultation
+     */
+    public Consultation Consultation.setBmi(BigDecimal bmi) {
+        this.bmi = bmi;
+        return this;
+    }
+    
+    /**
+     * Gets diabetesPedigreeFunction value
+     * 
+     * @return BigDecimal
+     */
+    public BigDecimal Consultation.getDiabetesPedigreeFunction() {
+        return this.diabetesPedigreeFunction;
+    }
+    
+    /**
+     * Sets diabetesPedigreeFunction value
+     * 
+     * @param diabetesPedigreeFunction
+     * @return Consultation
+     */
+    public Consultation Consultation.setDiabetesPedigreeFunction(BigDecimal diabetesPedigreeFunction) {
+        this.diabetesPedigreeFunction = diabetesPedigreeFunction;
+        return this;
+    }
+    
+    /**
+     * Gets age value
+     * 
+     * @return Integer
+     */
+    public Integer Consultation.getAge() {
+        return this.age;
+    }
+    
+    /**
+     * Sets age value
+     * 
+     * @param age
+     * @return Consultation
+     */
+    public Consultation Consultation.setAge(Integer age) {
+        this.age = age;
+        return this;
+    }
+    
+    /**
      * This `equals` implementation is specific for JPA entities and uses 
      * the entity identifier for it, following the article in 
      * https://vladmihalcea.com/2016/06/06/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
@@ -129,7 +290,15 @@ privileged aspect Consultation_Roo_JavaBean {
         return "Consultation {" + 
                 "id='" + id + '\'' + 
                 ", version='" + version + '\'' + 
-                ", consultationDate='" + consultationDate == null ? null : java.text.DateFormat.getDateTimeInstance().format(consultationDate.getTime()) + '\'' + "}" + super.toString();
+                ", consultationDate='" + consultationDate == null ? null : java.text.DateFormat.getDateTimeInstance().format(consultationDate.getTime()) + '\'' + 
+                ", pregnancies='" + pregnancies + '\'' + 
+                ", glucose='" + glucose + '\'' + 
+                ", bloodPressure='" + bloodPressure + '\'' + 
+                ", skinThickness='" + skinThickness + '\'' + 
+                ", insulin='" + insulin + '\'' + 
+                ", bmi='" + bmi + '\'' + 
+                ", diabetesPedigreeFunction='" + diabetesPedigreeFunction + '\'' + 
+                ", age='" + age + '\'' + "}" + super.toString();
     }
     
 }

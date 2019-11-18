@@ -15,6 +15,8 @@ import javax.persistence.Column;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
+import java.math.BigDecimal;
 
 /**
  * = Consultation
@@ -59,4 +61,60 @@ public class Consultation {
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Calendar consultationDate;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private Integer pregnancies;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private Integer glucose;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private Integer bloodPressure;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private Integer skinThickness;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private Integer insulin;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal bmi;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal diabetesPedigreeFunction;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private Integer age;
 }
