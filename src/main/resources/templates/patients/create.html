@@ -2,8 +2,8 @@
 <html lang="en" data-layout-decorate="~{layouts/default-layout}">
   <head id="head">
 
-    <title data-th-text="#{label_create_entity(#{label_patient})}">
-      Create Patient - diabetes-app - SpringRoo Application</title>
+    <title data-th-text="#{label_register_entity(#{label_patient})}">
+      Register Patient - diabetes-app</title>
 
     <!-- DateTimePicker -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" data-th-href="@{/webjars/datetimepicker/build/jquery.datetimepicker.min.css}" />
@@ -26,7 +26,7 @@
       <section data-layout-fragment="content">
         <div class="container-fluid content" data-th-with="collectionLink=${@linkBuilder.of('PatientsCollectionThymeleafController')}">
 
-          <h1 data-th-text="#{label_create_entity(#{label_patient})}">Create Patient</h1>
+          <h1 data-th-text="#{label_register_entity(#{label_patient})}">Register Patient</h1>
 
           <!-- FORM -->
           <form class="form-horizontal validate" method="POST" data-th-object="${patient}" data-th-action="${collectionLink.to('create').with('patient', patient.id)}">
