@@ -60,4 +60,17 @@ public class Patient {
     @OneToMany(cascade = { javax.persistence.CascadeType.MERGE, javax.persistence.CascadeType.PERSIST }, fetch = FetchType.LAZY, mappedBy = "patient")
     @RooJpaRelation(type = JpaRelationType.AGGREGATION)
     private Set<Consultation> consultations = new HashSet<Consultation>();
+
+	/**
+     * TODO Auto-generated method documentation
+     * 
+     * @return String
+     */
+    public String toString() {
+        return "Patient {" + 
+                "id='" + id + '\'' + 
+                ", version='" + version + '\'' + 
+                ", firstName='" + firstName + '\'' + 
+                ", lastName='" + lastName + '\'' + "}";
+    }
 }

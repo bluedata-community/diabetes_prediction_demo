@@ -50,7 +50,7 @@ public class ConsultationServiceImpl implements ConsultationService {
 //         
 //        ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
         
-        return BigDecimal.valueOf(0.813);
+        return BigDecimal.valueOf(1);
     }
 
 }

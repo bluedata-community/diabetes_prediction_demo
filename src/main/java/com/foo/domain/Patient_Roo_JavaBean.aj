@@ -140,17 +140,5 @@ privileged aspect Patient_Roo_JavaBean {
         return 31;
     }
     
-    /**
-     * TODO Auto-generated method documentation
-     * 
-     * @return String
-     */
-    public String Patient.toString() {
-        return "Patient {" + 
-                "id='" + id + '\'' + 
-                ", version='" + version + '\'' + 
-                ", firstName='" + firstName + '\'' + 
-                ", lastName='" + lastName + '\'' + "}" + super.toString();
-    }
-    
+        
 }
