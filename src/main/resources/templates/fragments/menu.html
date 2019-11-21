@@ -37,20 +37,22 @@
             <div id="mainnav" class="navbar-collapse collapse">
 
               <ul class="nav navbar-nav" id="entitiesMenuEntries">
-                <li class="dropdown" id="consultation-entry" data-z="528a1668">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_consultation})}">Consultation<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-	                   <li><a href="/consultations/create-form" data-th-href="@{/consultations/create-form}" data-th-utext="#{label_create_entity(#{label_consultation})}">Create Consultation</a></li>
-	                  <li><a href="/consultations" data-th-href="@{/consultations}" data-th-utext="#{label_list_entity(#{label_consultation_plural})}">List Consultation</a></li>
-                 </ul>
-                </li>
                 <li class="dropdown" id="patient-entry" data-z="user-managed">
                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_patient})}">Patient<span class="caret"></span></a>
                  <ul class="dropdown-menu">
-	                   <li><a href="/patients/create-form" data-th-href="@{/patients/create-form}" data-th-utext="#{label_create_entity(#{label_patient})}">Register Patient</a></li>
+	                   <li><a href="/patients/create-form" data-th-href="@{/patients/create-form}" data-th-utext="#{label_register_entity(#{label_patient})}">Register Patient</a></li>
 	                  <li><a href="/patients" data-th-href="@{/patients}" data-th-utext="#{label_list_entity(#{label_patient_plural})}">List Patient</a></li>
                  </ul>
                 </li>
+                
+                <li class="dropdown" id="consultation-entry" data-z="user-managed">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_consultation})}">Consultation<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/consultations/create-form" data-th-href="@{/consultations/create-form}" data-th-utext="#{label_add_entity(#{label_consultation})}">Create Consultation</a></li>
+	                  <li><a href="/consultations" data-th-href="@{/consultations}" data-th-utext="#{label_list_entity(#{label_consultation_plural})}">List Consultation</a></li>
+                 </ul>
+                </li>
+
               </ul>
 
               <!-- Language select -->
