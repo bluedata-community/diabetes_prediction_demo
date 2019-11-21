@@ -140,5 +140,4 @@ privileged aspect Patient_Roo_JavaBean {
         return 31;
     }
     
-        
 }

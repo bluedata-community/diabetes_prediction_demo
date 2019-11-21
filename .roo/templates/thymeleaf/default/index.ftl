@@ -117,17 +117,7 @@
              <div class="row">
               <div class="col-md-12">
                 <ul class="pull-right list-inline social-links">
-                  <li><small data-th-text="${r"#{"}info_twitter}">As always, you can find us also on </small></li>
-                  <li>
-                    <a href="http://twitter.com/springroo" class="icon-twitter" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/groups/3293132" class="icon-linkedin" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
              </div>
