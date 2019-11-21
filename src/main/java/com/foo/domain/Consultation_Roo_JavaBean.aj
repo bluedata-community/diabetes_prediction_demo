@@ -252,6 +252,15 @@ privileged aspect Consultation_Roo_JavaBean {
     }
     
     /**
+     * Gets prediction value
+     * 
+     * @return BigDecimal
+     */
+    public BigDecimal Consultation.getPrediction() {
+        return this.prediction;
+    }
+    
+    /**
      * This `equals` implementation is specific for JPA entities and uses 
      * the entity identifier for it, following the article in 
      * https://vladmihalcea.com/2016/06/06/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
@@ -298,7 +307,8 @@ privileged aspect Consultation_Roo_JavaBean {
                 ", insulin='" + insulin + '\'' + 
                 ", bmi='" + bmi + '\'' + 
                 ", diabetesPedigreeFunction='" + diabetesPedigreeFunction + '\'' + 
-                ", age='" + age + '\'' + "}" + super.toString();
+                ", age='" + age + '\'' + 
+                ", prediction='" + prediction + '\'' + "}" + super.toString();
     }
     
 }

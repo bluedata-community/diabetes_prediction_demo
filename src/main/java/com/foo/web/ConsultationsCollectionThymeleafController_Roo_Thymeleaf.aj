@@ -548,6 +548,9 @@ privileged aspect ConsultationsCollectionThymeleafController_Roo_Thymeleaf {
         else if (columnName.equals("age")) {
             builder.addColumn(getMessageSource().getMessage("label_consultation_age", null, "Age", locale), "age", Integer.class.getName(), 100);
         }
+        else if (columnName.equals("prediction")) {
+            builder.addColumn(getMessageSource().getMessage("label_consultation_prediction", null, "Prediction", locale), "prediction", BigDecimal.class.getName(), 100);
+        }
         }
         catch (ColumnBuilderException e) {
             String errorMessage = getMessageSource().getMessage("error_exportingErrorException", 

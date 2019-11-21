@@ -111,17 +111,6 @@ privileged aspect ConsultationServiceImpl_Roo_Service_Impl {
     /**
      * TODO Auto-generated method documentation
      * 
-     * @param entity
-     * @return Consultation
-     */
-    @Transactional
-    public Consultation ConsultationServiceImpl.save(Consultation entity) {
-        return getConsultationRepository().save(entity);
-    }
-    
-    /**
-     * TODO Auto-generated method documentation
-     * 
      * @param id
      * @return Consultation
      */

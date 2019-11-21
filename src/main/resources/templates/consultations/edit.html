@@ -124,6 +124,14 @@
       <span id="age-error" class="help-block" data-th-if="${#fields.hasErrors('age')}" data-th-errors="*{age}">Error message.</span>
   </div>
 </div>
+                    <div class="form-group has-error has-feedback" data-z="user-managed" id="consultation-prediction-field" data-th-classappend="${#fields.hasErrors('prediction')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="prediction" class="col-md-3 control-label" data-th-text="#{label_consultation_prediction}">prediction</label>
+  <div class="col-md-3">
+    <input id="prediction" name="prediction" disabled="" data-th-value="*{{prediction}}" type="text" class="form-control inputmask" placeholder="prediction" data-th-placeholder="#{label_consultation_prediction}" data-toggle="tooltip" aria-describedby="predictionStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />
+      <span data-th-classappend="${#fields.hasErrors('prediction')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('prediction')}" aria-hidden="true"></span>
+      <span id="prediction-error" class="help-block" data-th-if="${#fields.hasErrors('prediction')}" data-th-errors="*{prediction}">Error message.</span>
+  </div>
+</div>
              </fieldset>
 
 

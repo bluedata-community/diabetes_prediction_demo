@@ -34,3 +34,26 @@ web mvc controller --all --pathPrefix /api
 focus --class ~.domain.Consultation
 field date --fieldName consultationDate  --type java.util.Calendar --column CONSULTATION_DATE  --persistenceType JPA_TIMESTAMP
 // Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log closed at 2019-11-17 22:31:39
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-11-18 06:51:45
+focus --class ~.domain.Consultation
+field number --fieldName pregnancies --type java.lang.Integer
+field number --fieldName glucose --type java.lang.Integer
+field number --fieldName bloodPressure --type java.lang.Integer
+field number --fieldName skinThickness --type java.lang.Integer
+field number --fieldName insulin --type java.lang.Integer
+field number --fieldName bmi --type java.math.BigDecimal
+field number --fieldName diabetesPedigreeFunction --type java.math.BigDecimal
+field number --fieldName age --type java.lang.Integer
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log closed at 2019-11-19 22:16:52
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-11-19 22:17:05
+focus --class ~.domain.Consultation
+field number --fieldName prediction  --type java.math.BigDecimal
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-11-21 04:46:51
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log closed at 2019-11-21 04:47:57
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-11-21 04:48:17
+web mvc templates setup --type THYMELEAF 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log closed at 2019-11-21 04:52:56
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-11-21 04:53:10
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log closed at 2019-11-21 05:45:53

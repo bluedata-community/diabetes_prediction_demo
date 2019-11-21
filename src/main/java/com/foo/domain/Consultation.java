@@ -117,4 +117,22 @@ public class Consultation {
      */
     @NumberFormat
     private Integer age;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal prediction;
+
+	/**
+     * Sets prediction value
+     * 
+     * @param prediction
+     * @return Consultation
+     */
+    public Consultation setPrediction(BigDecimal prediction) {
+        this.prediction = prediction;
+        return this;
+    }
 }
