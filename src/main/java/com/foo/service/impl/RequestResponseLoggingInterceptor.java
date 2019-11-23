@@ -25,19 +25,19 @@ public class RequestResponseLoggingInterceptor implements ClientHttpRequestInter
  
     private void logRequest(HttpRequest request, byte[] body) throws IOException {
             System.out.println("===========================request begin================================================");
-            System.out.println("URI         : {}" + request.getURI());
-            System.out.println("Method      : {}" + request.getMethod());
-            System.out.println("Headers     : {}" + request.getHeaders());
-            System.out.println("Request body: {}" + new String(body, "UTF-8"));
+            System.out.println("URI         : " + request.getURI());
+            System.out.println("Method      : " + request.getMethod());
+            System.out.println("Headers     : " + request.getHeaders());
+            System.out.println("Request body: " + new String(body, "UTF-8"));
             System.out.println("==========================request end================================================");
     }
  
     private void logResponse(ClientHttpResponse response) throws IOException {
             System.out.println("============================response begin==========================================");
-            System.out.println("Status code  : {}" + response.getStatusCode());
-            System.out.println("Status text  : {}" + response.getStatusText());
-            System.out.println("Headers      : {}" + response.getHeaders());
-            System.out.println("Response body: {}" + StreamUtils.copyToString(response.getBody(), Charset.defaultCharset()));
+            System.out.println("Status code  : " + response.getStatusCode());
+            System.out.println("Status text  : " + response.getStatusText());
+            System.out.println("Headers      : " + response.getHeaders());
+            System.out.println("Response body: " + StreamUtils.copyToString(response.getBody(), Charset.defaultCharset()));
             System.out.println("=======================response end=================================================");
     }
 }

@@ -1,11 +1,11 @@
 package com.foo.service.impl;
 import com.foo.domain.Consultation;
 import com.foo.service.api.ConsultationService;
+import com.jayway.jsonpath.JsonPath;
+
 import java.math.BigDecimal;
 
 import java.util.Arrays;
-import java.util.Collections;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -49,7 +49,9 @@ public class ConsultationServiceImpl implements ConsultationService {
     {
     	try {
 	        RestTemplate restTemplate = new RestTemplate();
-	        restTemplate.setInterceptors(Collections.singletonList(new RequestResponseLoggingInterceptor()));
+	        
+	        // uncomment to debug
+	        //restTemplate.setInterceptors(Collections.singletonList(new RequestResponseLoggingInterceptor()));
 	        
 	        HttpHeaders headers = new HttpHeaders();
 	        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -70,8 +72,14 @@ public class ConsultationServiceImpl implements ConsultationService {
 	        HttpEntity<String> entity = new HttpEntity<String>(data, headers);
 	         
 	        ResponseEntity<String> result = restTemplate.exchange(mlopsUri, HttpMethod.POST, entity, String.class);
-	       
-	        return BigDecimal.valueOf(1);
+	        
+	        //System.out.println(result.getBody());
+	        
+	        String output = JsonPath.parse(result.getBody()).read("output");
+	        
+	        //System.out.println("**** " + output);
+		       
+	        return new BigDecimal(output.replaceAll("\\s+",""));
     		
     	} catch (Exception e) {
     		e.printStackTrace();
