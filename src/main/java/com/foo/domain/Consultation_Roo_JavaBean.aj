@@ -91,15 +91,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets pregnancies value
-     * 
-     * @return Integer
-     */
-    public Integer Consultation.getPregnancies() {
-        return this.pregnancies;
-    }
-    
+        
     /**
      * Sets pregnancies value
      * 
@@ -111,15 +103,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets glucose value
-     * 
-     * @return Integer
-     */
-    public Integer Consultation.getGlucose() {
-        return this.glucose;
-    }
-    
+        
     /**
      * Sets glucose value
      * 
@@ -131,15 +115,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets bloodPressure value
-     * 
-     * @return Integer
-     */
-    public Integer Consultation.getBloodPressure() {
-        return this.bloodPressure;
-    }
-    
+        
     /**
      * Sets bloodPressure value
      * 
@@ -151,15 +127,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets skinThickness value
-     * 
-     * @return Integer
-     */
-    public Integer Consultation.getSkinThickness() {
-        return this.skinThickness;
-    }
-    
+        
     /**
      * Sets skinThickness value
      * 
@@ -171,15 +139,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets insulin value
-     * 
-     * @return Integer
-     */
-    public Integer Consultation.getInsulin() {
-        return this.insulin;
-    }
-    
+        
     /**
      * Sets insulin value
      * 
@@ -191,15 +151,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets bmi value
-     * 
-     * @return BigDecimal
-     */
-    public BigDecimal Consultation.getBmi() {
-        return this.bmi;
-    }
-    
+        
     /**
      * Sets bmi value
      * 
@@ -211,15 +163,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets diabetesPedigreeFunction value
-     * 
-     * @return BigDecimal
-     */
-    public BigDecimal Consultation.getDiabetesPedigreeFunction() {
-        return this.diabetesPedigreeFunction;
-    }
-    
+        
     /**
      * Sets diabetesPedigreeFunction value
      * 
@@ -231,15 +175,7 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-    /**
-     * Gets age value
-     * 
-     * @return Integer
-     */
-    public Integer Consultation.getAge() {
-        return this.age;
-    }
-    
+        
     /**
      * Sets age value
      * 

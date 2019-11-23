@@ -1,11 +1,15 @@
 package com.foo.service.impl;
 import com.foo.domain.Consultation;
 import com.foo.service.api.ConsultationService;
+import com.foo.service.impl.RequestResponseLoggingInterceptor;
+
 import com.jayway.jsonpath.JsonPath;
 
 import java.math.BigDecimal;
 
 import java.util.Arrays;
+import java.util.Collections;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -45,8 +49,9 @@ public class ConsultationServiceImpl implements ConsultationService {
         return getConsultationRepository().save(consultation);
     }
     
-    private java.math.BigDecimal getScore(Consultation consultation)
+    private java.math.BigDecimal getScore(Consultation c)
     {
+    	
     	try {
 	        RestTemplate restTemplate = new RestTemplate();
 	        
@@ -59,15 +64,17 @@ public class ConsultationServiceImpl implements ConsultationService {
 	        headers.add("X-Auth-Token", mlopsXauthToken);
 	        
 	        String data = "{\"use_scoring\": true, \"scoring_args\": {"
-	        		+ "\"NumPreg\":1.0,"
-	        		+ "\"Glucose\": 85.0,"
-	        		+ "\"BloodPressure\": 66.0,"
-	        		+ "\"SkinThick\": 29.0,"
-	        		+ "\"Insulin\": 0.0,"
-	        		+ "\"BMI\": 26.6,"
-	        		+ "\"DiabetesPedFunc\": 0.351,"
-	        		+ "\"Age\": 35.0}"
+	        		+ "\"NumPreg\": "         + c.getPregnancies().doubleValue() + ","
+	        		+ "\"Glucose\": "         + c.getGlucose().doubleValue() + ","
+	        		+ "\"BloodPressure\": "   + c.getBloodPressure().doubleValue() + ","
+	        		+ "\"SkinThick\": "       + c.getSkinThickness().doubleValue() + ","
+	        		+ "\"Insulin\": "          + c.getInsulin().doubleValue() + ","
+	        		+ "\"BMI\": "             + c.getBmi().doubleValue() + ","
+	        		+ "\"DiabetesPedFunc\": " + c.getDiabetesPedigreeFunction().doubleValue() + ","
+	        		+ "\"Age\": "             + c.getAge().doubleValue() + "}"
 	        		+ "}";
+	        
+	        System.out.println(data);
 	        
 	        HttpEntity<String> entity = new HttpEntity<String>(data, headers);
 	         
@@ -75,11 +82,13 @@ public class ConsultationServiceImpl implements ConsultationService {
 	        
 	        //System.out.println(result.getBody());
 	        
-	        String output = JsonPath.parse(result.getBody()).read("output");
-	        
-	        //System.out.println("**** " + output);
-		       
-	        return new BigDecimal(output.replaceAll("\\s+",""));
+	        try {
+	        	String output = JsonPath.parse(result.getBody()).read("output");
+	        	return new BigDecimal(output.replaceAll("\\s+",""));
+	        } catch (Exception e) {
+	    		e.printStackTrace();
+	    		return BigDecimal.valueOf(-1);
+	    	}
     		
     	} catch (Exception e) {
     		e.printStackTrace();

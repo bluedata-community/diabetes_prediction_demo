@@ -109,7 +109,7 @@ public class Consultation {
      *
      */
     @NumberFormat
-    private BigDecimal diabetesPedigreeFunction;
+	private BigDecimal diabetesPedigreeFunction;
 
     /**
      * TODO Auto-generated attribute documentation
@@ -134,5 +134,77 @@ public class Consultation {
     public Consultation setPrediction(BigDecimal prediction) {
         this.prediction = prediction;
         return this;
+    }
+
+	/**
+     * Gets age value
+     * 
+     * @return Integer
+     */
+    public Integer getAge() {
+        return this.age;
+    }
+
+	/**
+     * Gets diabetesPedigreeFunction value
+     * 
+     * @return BigDecimal
+     */
+    public BigDecimal getDiabetesPedigreeFunction() {
+        return this.diabetesPedigreeFunction;
+    }
+
+	/**
+     * Gets insulin value
+     * 
+     * @return Integer
+     */
+    public Integer getInsulin() {
+        return this.insulin;
+    }
+
+	/**
+     * Gets skinThickness value
+     * 
+     * @return Integer
+     */
+    public Integer getSkinThickness() {
+        return this.skinThickness;
+    }
+
+	/**
+     * Gets glucose value
+     * 
+     * @return Integer
+     */
+    public Integer getGlucose() {
+        return this.glucose;
+    }
+
+	/**
+     * Gets pregnancies value
+     * 
+     * @return Integer
+     */
+    public Integer getPregnancies() {
+        return this.pregnancies;
+    }
+
+	/**
+     * Gets bmi value
+     * 
+     * @return BigDecimal
+     */
+    public BigDecimal getBmi() {
+        return this.bmi;
+    }
+
+	/**
+     * Gets bloodPressure value
+     * 
+     * @return Integer
+     */
+    public Integer getBloodPressure() {
+        return this.bloodPressure;
     }
 }
