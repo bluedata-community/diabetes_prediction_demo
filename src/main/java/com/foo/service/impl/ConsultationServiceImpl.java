@@ -25,10 +25,10 @@ import org.springframework.web.client.RestTemplate;
 public class ConsultationServiceImpl implements ConsultationService {
 	
 	
-	@Value("${bluedata.mlops-uri}")
+	@Value("${bluedata.mlops.uri}")
 	private String mlopsUri;
 	
-	@Value("${bluedata.xauth-token}")
+	@Value("${bluedata.mlops.xauthtoken}")
 	private String mlopsXauthToken;
 
 	/**
