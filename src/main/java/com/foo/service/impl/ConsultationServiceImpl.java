@@ -4,6 +4,7 @@ import com.foo.service.api.ConsultationService;
 import java.math.BigDecimal;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -48,17 +49,32 @@ public class ConsultationServiceImpl implements ConsultationService {
     {
     	try {
 	        RestTemplate restTemplate = new RestTemplate();
+	        restTemplate.setInterceptors(Collections.singletonList(new RequestResponseLoggingInterceptor()));
 	        
 	        HttpHeaders headers = new HttpHeaders();
 	        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+	        headers.setContentType(MediaType.APPLICATION_JSON);
 	        headers.add("X-Auth-Token", mlopsXauthToken);
-	        HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
+	        
+	        String data = "{\"use_scoring\": true, \"scoring_args\": {"
+	        		+ "\"NumPreg\":1.0,"
+	        		+ "\"Glucose\": 85.0,"
+	        		+ "\"BloodPressure\": 66.0,"
+	        		+ "\"SkinThick\": 29.0,"
+	        		+ "\"Insulin\": 0.0,"
+	        		+ "\"BMI\": 26.6,"
+	        		+ "\"DiabetesPedFunc\": 0.351,"
+	        		+ "\"Age\": 35.0}"
+	        		+ "}";
+	        
+	        HttpEntity<String> entity = new HttpEntity<String>(data, headers);
 	         
-	        ResponseEntity<String> result = restTemplate.exchange(mlopsUri, HttpMethod.GET, entity, String.class);
-    		
+	        ResponseEntity<String> result = restTemplate.exchange(mlopsUri, HttpMethod.POST, entity, String.class);
+	       
 	        return BigDecimal.valueOf(1);
     		
     	} catch (Exception e) {
+    		e.printStackTrace();
     		return BigDecimal.valueOf(-1);
     	}
     }
