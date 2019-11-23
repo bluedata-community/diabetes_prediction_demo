@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 
 import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -22,6 +23,13 @@ import org.springframework.web.client.RestTemplate;
  */
 @RooServiceImpl(service = ConsultationService.class)
 public class ConsultationServiceImpl implements ConsultationService {
+	
+	
+	@Value("${bluedata.mlops-uri}")
+	private String mlopsUri;
+	
+	@Value("${bluedata.xauth-token}")
+	private String mlopsXauthToken;
 
 	/**
      * TODO Auto-generated method documentation
@@ -38,19 +46,21 @@ public class ConsultationServiceImpl implements ConsultationService {
     
     private java.math.BigDecimal getScore(Consultation consultation)
     {
-        final String uri = "http://localhost:8080/springrestexample/employees";
-        final String tok = "X-Auth-Token";
-     
-//        RestTemplate restTemplate = new RestTemplate();
-//        
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-//        headers.add("X-Auth-Token", tok);
-//        HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
-//         
-//        ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-        
-        return BigDecimal.valueOf(1);
+    	try {
+	        RestTemplate restTemplate = new RestTemplate();
+	        
+	        HttpHeaders headers = new HttpHeaders();
+	        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+	        headers.add("X-Auth-Token", mlopsXauthToken);
+	        HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
+	         
+	        ResponseEntity<String> result = restTemplate.exchange(mlopsUri, HttpMethod.GET, entity, String.class);
+    		
+	        return BigDecimal.valueOf(1);
+    		
+    	} catch (Exception e) {
+    		return BigDecimal.valueOf(-1);
+    	}
     }
 
 }
