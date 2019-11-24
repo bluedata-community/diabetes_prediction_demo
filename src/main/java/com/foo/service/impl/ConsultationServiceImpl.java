@@ -49,13 +49,29 @@ public class ConsultationServiceImpl implements ConsultationService {
         return getConsultationRepository().save(consultation);
     }
     
+    private double doubleValue(Integer v) {
+    	try {
+    		return v.doubleValue();		
+    	} catch (Exception e) {
+    		return 0;
+    	}
+    }
+    
+    private double doubleValue(BigDecimal v) {
+    	try {
+    		return v.doubleValue();		
+    	} catch (Exception e) {
+    		return 0;
+    	}
+    }
+    
     private java.math.BigDecimal getScore(Consultation c)
     {
     	
     	try {
 	        RestTemplate restTemplate = new RestTemplate();
 	        
-	        // uncomment to debug
+	        // uncomment to debug request/response
 	        //restTemplate.setInterceptors(Collections.singletonList(new RequestResponseLoggingInterceptor()));
 	        
 	        HttpHeaders headers = new HttpHeaders();
@@ -64,17 +80,17 @@ public class ConsultationServiceImpl implements ConsultationService {
 	        headers.add("X-Auth-Token", mlopsXauthToken);
 	        
 	        String data = "{\"use_scoring\": true, \"scoring_args\": {"
-	        		+ "\"NumPreg\": "         + c.getPregnancies().doubleValue() + ","
-	        		+ "\"Glucose\": "         + c.getGlucose().doubleValue() + ","
-	        		+ "\"BloodPressure\": "   + c.getBloodPressure().doubleValue() + ","
-	        		+ "\"SkinThick\": "       + c.getSkinThickness().doubleValue() + ","
-	        		+ "\"Insulin\": "          + c.getInsulin().doubleValue() + ","
-	        		+ "\"BMI\": "             + c.getBmi().doubleValue() + ","
-	        		+ "\"DiabetesPedFunc\": " + c.getDiabetesPedigreeFunction().doubleValue() + ","
-	        		+ "\"Age\": "             + c.getAge().doubleValue() + "}"
+	        		+ "\"NumPreg\": "         + doubleValue(c.getPregnancies()) + ","
+	        		+ "\"Glucose\": "         + doubleValue(c.getGlucose()) + ","
+	        		+ "\"BloodPressure\": "   + doubleValue(c.getBloodPressure()) + ","
+	        		+ "\"SkinThick\": "       + doubleValue(c.getSkinThickness()) + ","
+	        		+ "\"Insulin\": "         + doubleValue(c.getInsulin()) + ","
+	        		+ "\"BMI\": "             + doubleValue(c.getBmi()) + ","
+	        		+ "\"DiabetesPedFunc\": " + doubleValue(c.getDiabetesPedigreeFunction()) + ","
+	        		+ "\"Age\": "             + doubleValue(c.getAge()) + "}"
 	        		+ "}";
 	        
-	        System.out.println(data);
+	        //System.out.println(data);
 	        
 	        HttpEntity<String> entity = new HttpEntity<String>(data, headers);
 	         
