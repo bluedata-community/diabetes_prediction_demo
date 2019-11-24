@@ -5,16 +5,15 @@ services:
 - docker
 
 deploy:
-  provider: releases
-  api_key:
-    secure: GzfEepde7LFrTZfzB9t5feBFfmKfbgMiQpusFTpmkn2AgYZMK+mp0eGu9COkiPlBSuTG/QkWcrxm8xAmD9QbPdFeYKJhh/Lk0BHV8gYwiPtNbZ91JM2sj2cVrNJBtN9pccO+VomI//swhgk7kvi3dsRiSN4/ZtwP4XQA3+QSpJJNOc8OKjnEJVYFERwDbJQLZ9i6fwA1yKv+HzRHUHR1pLNF54F4f8Eiw6QHhpKVHGAwuC4VW5WUBkk4JbpzNf0yZXKvTk3iZU3PsORummXexZbcU+T/z7yJlLlGZcdGoST/Hp4cd9fyW8GTSAUtyxyX4GudiZ1MF6zZBIw13BKt8Mm55xBMGPVmP4ds48ql6nidPU+AZKRM/G9OWT9difxdrfFw+TtZ3/wH10Hq/bTQsxuM/0fDfUP/StyCVP3WsNnCkWkL6jMBKzcR4cQq13oPtH/lIVBY5y40r49WsuIWNdYrPkSLYmS65GMJZBblRVvZ/KCM+R4OGzaDviZcFrlevoV6DSUsYSugRSa0JIpsbS0fep1Xn6eIKOc4FLy6uIlwbNxSw0UceNQHkJ+OCl2HpKIBOnCPjmEaGKHOCl5NI+BfEwT42G5BloPonR4fysqv6zwRZ8Nnw2rtztRJEB5QkONXKyXVC338uBKW99j4ndsLW7yOJ5gmRFbUaObEKqA=
-  file: target/db-demo-app-exec.jar
-  on:
-    repo: snowch/diabetes_prediction_demo
+  - provider: releases
+    api_key:
+      secure: GzfEepde7LFrTZfzB9t5feBFfmKfbgMiQpusFTpmkn2AgYZMK+mp0eGu9COkiPlBSuTG/QkWcrxm8xAmD9QbPdFeYKJhh/Lk0BHV8gYwiPtNbZ91JM2sj2cVrNJBtN9pccO+VomI//swhgk7kvi3dsRiSN4/ZtwP4XQA3+QSpJJNOc8OKjnEJVYFERwDbJQLZ9i6fwA1yKv+HzRHUHR1pLNF54F4f8Eiw6QHhpKVHGAwuC4VW5WUBkk4JbpzNf0yZXKvTk3iZU3PsORummXexZbcU+T/z7yJlLlGZcdGoST/Hp4cd9fyW8GTSAUtyxyX4GudiZ1MF6zZBIw13BKt8Mm55xBMGPVmP4ds48ql6nidPU+AZKRM/G9OWT9difxdrfFw+TtZ3/wH10Hq/bTQsxuM/0fDfUP/StyCVP3WsNnCkWkL6jMBKzcR4cQq13oPtH/lIVBY5y40r49WsuIWNdYrPkSLYmS65GMJZBblRVvZ/KCM+R4OGzaDviZcFrlevoV6DSUsYSugRSa0JIpsbS0fep1Xn6eIKOc4FLy6uIlwbNxSw0UceNQHkJ+OCl2HpKIBOnCPjmEaGKHOCl5NI+BfEwT42G5BloPonR4fysqv6zwRZ8Nnw2rtztRJEB5QkONXKyXVC338uBKW99j4ndsLW7yOJ5gmRFbUaObEKqA=
+    file: target/db-demo-app-exec.jar
+    on:
+      repo: snowch/diabetes_prediction_demo
 
-deploy:
-  provider: script
-  script: bash docker_push
-  on:
-    branch: master
-  skip_cleanup: true
+  - provider: script
+    script: bash docker_push
+    on:
+      branch: master
+    skip_cleanup: true
