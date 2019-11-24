@@ -1,20 +1,8 @@
 #!/bin/bash
 
-echo "****** Starting: mvn package *******"
-
 mvn package
 
-echo "****** Starting: test jar exists *******"
-
-#[[ -f target/db-demo-app-exec.jar ]] || echo "ERROR: Couldn't find target/db-demo-app-exec.jar" && exit 1
-
-echo "****** Starting: docker build *******"
-
-ls target/
-
 docker build -t snowch/db-demo .
-
-echo "****** Starting: docker push *******"
 
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 docker push snowch/db-demo
