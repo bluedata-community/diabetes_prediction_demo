@@ -11,6 +11,7 @@ deploy:
     file: target/db-demo-app-exec.jar
     on:
       repo: snowch/diabetes_prediction_demo
+    skip_cleanup: true
 
   - provider: script
     script: bash docker_push
