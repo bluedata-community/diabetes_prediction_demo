@@ -6,7 +6,7 @@
 
 ### BlueData
 
-- Provisioning a Centos 7 cluster
+- Provision a Centos 7 cluster
 - ssh into the centos cluster as an admin user and run:
 
 ```
