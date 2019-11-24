@@ -16,7 +16,7 @@ wget https://github.com/snowch/diabetes_demo/releases/latest/download/db-demo-ap
 export BLUEDATA_MLOPS_URI=http://host:port/model_name/model_version/predict
 export BLUEDATA_MLOPS_XAUTHTOKEN=your_token
 
-java -Dbluedata.mlops.uri=$BLUEDATA_MLOPS_URI -Dbluedata.mlops.xauthtoken=$BLUEDATA_MLOPS_XAUTHTOKEN -jar db-demo-app-exec.jar
+nohup java -Dbluedata.mlops.uri=$BLUEDATA_MLOPS_URI -Dbluedata.mlops.xauthtoken=$BLUEDATA_MLOPS_XAUTHTOKEN -jar db-demo-app-exec.jar &
 ```
 
 On the BlueData Centos 7 cluster screen, click **Add a cluster service**:
