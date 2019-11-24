@@ -1,10 +1,6 @@
 ## Usage
 
-### Docker
-
-- See instructions at: https://hub.docker.com/repository/docker/snowch/db-demo
-
-### BlueData
+### Deploying app on BlueData
 
 - Provision a Centos 7 cluster
 - ssh into the centos cluster as an admin user and run:
@@ -30,3 +26,7 @@ On the BlueData Centos 7 cluster screen, click **Add a cluster service**:
 Then hit Submit
 
 You can now access the Diabetes Prediction Demo app using the BlueData gateway host and port.
+
+### Deploying app on Docker
+
+- See instructions at: https://hub.docker.com/repository/docker/snowch/db-demo
