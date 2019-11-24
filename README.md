@@ -11,7 +11,7 @@
 
 ```
 sudo yum install java-1.8.0-openjdk
-wget https://github.com/snowch/diabetes_prediction_demo/releases/download/untagged-1816487772751866189f/db-demo-app-exec.jar
+wget https://github.com/snowch/diabetes_demo/releases/latest/download/db-demo-app-exec.jar
 
 export BLUEDATA_MLOPS_URI=http://host:port/model_name/model_version/predict
 export BLUEDATA_MLOPS_XAUTHTOKEN=your_token
