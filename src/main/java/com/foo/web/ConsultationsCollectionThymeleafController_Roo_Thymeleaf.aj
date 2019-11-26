@@ -524,32 +524,32 @@ privileged aspect ConsultationsCollectionThymeleafController_Roo_Thymeleaf {
         else if (columnName.equals("consultationDate")) {
             builder.addColumn(getMessageSource().getMessage("label_consultation_consultationdate", null, "Consultation Date", locale), "consultationDate", Calendar.class.getName(), 100);
         }
-        else if (columnName.equals("pregnancies")) {
-            builder.addColumn(getMessageSource().getMessage("label_consultation_pregnancies", null, "Pregnancies", locale), "pregnancies", Integer.class.getName(), 100);
-        }
-        else if (columnName.equals("glucose")) {
-            builder.addColumn(getMessageSource().getMessage("label_consultation_glucose", null, "Glucose", locale), "glucose", Integer.class.getName(), 100);
-        }
-        else if (columnName.equals("bloodPressure")) {
-            builder.addColumn(getMessageSource().getMessage("label_consultation_bloodpressure", null, "Blood Pressure", locale), "bloodPressure", Integer.class.getName(), 100);
-        }
-        else if (columnName.equals("skinThickness")) {
-            builder.addColumn(getMessageSource().getMessage("label_consultation_skinthickness", null, "Skin Thickness", locale), "skinThickness", Integer.class.getName(), 100);
-        }
-        else if (columnName.equals("insulin")) {
-            builder.addColumn(getMessageSource().getMessage("label_consultation_insulin", null, "Insulin", locale), "insulin", Integer.class.getName(), 100);
-        }
         else if (columnName.equals("bmi")) {
             builder.addColumn(getMessageSource().getMessage("label_consultation_bmi", null, "Bmi", locale), "bmi", BigDecimal.class.getName(), 100);
         }
         else if (columnName.equals("diabetesPedigreeFunction")) {
             builder.addColumn(getMessageSource().getMessage("label_consultation_diabetespedigreefunction", null, "Diabetes Pedigree Function", locale), "diabetesPedigreeFunction", BigDecimal.class.getName(), 100);
         }
-        else if (columnName.equals("age")) {
-            builder.addColumn(getMessageSource().getMessage("label_consultation_age", null, "Age", locale), "age", Integer.class.getName(), 100);
-        }
         else if (columnName.equals("prediction")) {
             builder.addColumn(getMessageSource().getMessage("label_consultation_prediction", null, "Prediction", locale), "prediction", BigDecimal.class.getName(), 100);
+        }
+        else if (columnName.equals("pregnancies")) {
+            builder.addColumn(getMessageSource().getMessage("label_consultation_pregnancies", null, "Pregnancies", locale), "pregnancies", BigDecimal.class.getName(), 100);
+        }
+        else if (columnName.equals("glucose")) {
+            builder.addColumn(getMessageSource().getMessage("label_consultation_glucose", null, "Glucose", locale), "glucose", BigDecimal.class.getName(), 100);
+        }
+        else if (columnName.equals("bloodPressure")) {
+            builder.addColumn(getMessageSource().getMessage("label_consultation_bloodpressure", null, "Blood Pressure", locale), "bloodPressure", BigDecimal.class.getName(), 100);
+        }
+        else if (columnName.equals("skinThickness")) {
+            builder.addColumn(getMessageSource().getMessage("label_consultation_skinthickness", null, "Skin Thickness", locale), "skinThickness", BigDecimal.class.getName(), 100);
+        }
+        else if (columnName.equals("insulin")) {
+            builder.addColumn(getMessageSource().getMessage("label_consultation_insulin", null, "Insulin", locale), "insulin", BigDecimal.class.getName(), 100);
+        }
+        else if (columnName.equals("age")) {
+            builder.addColumn(getMessageSource().getMessage("label_consultation_age", null, "Age", locale), "age", BigDecimal.class.getName(), 100);
         }
         }
         catch (ColumnBuilderException e) {

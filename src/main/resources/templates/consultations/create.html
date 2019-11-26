@@ -3,7 +3,7 @@
   <head id="head">
 
     <title data-th-text="#{label_create_entity(#{label_consultation})}">
-      Create Consultation - diabetes-app</title>
+      Create Consultation - diabetes-app - SpringRoo Application</title>
 
     <!-- DateTimePicker -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" data-th-href="@{/webjars/datetimepicker/build/jquery.datetimepicker.min.css}" />
@@ -52,46 +52,6 @@
      <span id="consultationDate-error" class="help-block" data-th-if="${#fields.hasErrors('consultationDate')}" data-th-errors="*{consultationDate}">Error message.</span>
   </div>
 </div>
-<div class="form-group has-error has-feedback" data-z="a2f81b6a" id="consultation-pregnancies-field" data-th-classappend="${#fields.hasErrors('pregnancies')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="pregnancies" class="col-md-3 control-label" data-th-text="#{label_consultation_pregnancies}">pregnancies</label>
-  <div class="col-md-3">
-    <input id="pregnancies" name="pregnancies" data-th-value="*{{pregnancies}}" type="text" class="form-control inputmask" placeholder="pregnancies" data-th-placeholder="#{label_consultation_pregnancies}" data-toggle="tooltip" aria-describedby="pregnanciesStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" />
-      <span data-th-classappend="${#fields.hasErrors('pregnancies')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('pregnancies')}" aria-hidden="true"></span>
-      <span id="pregnancies-error" class="help-block" data-th-if="${#fields.hasErrors('pregnancies')}" data-th-errors="*{pregnancies}">Error message.</span>
-  </div>
-</div>
-<div class="form-group has-error has-feedback" data-z="784aa88a" id="consultation-glucose-field" data-th-classappend="${#fields.hasErrors('glucose')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="glucose" class="col-md-3 control-label" data-th-text="#{label_consultation_glucose}">glucose</label>
-  <div class="col-md-3">
-    <input id="glucose" name="glucose" data-th-value="*{{glucose}}" type="text" class="form-control inputmask" placeholder="glucose" data-th-placeholder="#{label_consultation_glucose}" data-toggle="tooltip" aria-describedby="glucoseStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" />
-      <span data-th-classappend="${#fields.hasErrors('glucose')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('glucose')}" aria-hidden="true"></span>
-      <span id="glucose-error" class="help-block" data-th-if="${#fields.hasErrors('glucose')}" data-th-errors="*{glucose}">Error message.</span>
-  </div>
-</div>
-<div class="form-group has-error has-feedback" data-z="a08c224a" id="consultation-bloodpressure-field" data-th-classappend="${#fields.hasErrors('bloodPressure')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="bloodPressure" class="col-md-3 control-label" data-th-text="#{label_consultation_bloodpressure}">bloodPressure</label>
-  <div class="col-md-3">
-    <input id="bloodPressure" name="bloodPressure" data-th-value="*{{bloodPressure}}" type="text" class="form-control inputmask" placeholder="bloodPressure" data-th-placeholder="#{label_consultation_bloodpressure}" data-toggle="tooltip" aria-describedby="bloodPressureStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" />
-      <span data-th-classappend="${#fields.hasErrors('bloodPressure')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('bloodPressure')}" aria-hidden="true"></span>
-      <span id="bloodPressure-error" class="help-block" data-th-if="${#fields.hasErrors('bloodPressure')}" data-th-errors="*{bloodPressure}">Error message.</span>
-  </div>
-</div>
-<div class="form-group has-error has-feedback" data-z="cb3fc30a" id="consultation-skinthickness-field" data-th-classappend="${#fields.hasErrors('skinThickness')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="skinThickness" class="col-md-3 control-label" data-th-text="#{label_consultation_skinthickness}">skinThickness</label>
-  <div class="col-md-3">
-    <input id="skinThickness" name="skinThickness" data-th-value="*{{skinThickness}}" type="text" class="form-control inputmask" placeholder="skinThickness" data-th-placeholder="#{label_consultation_skinthickness}" data-toggle="tooltip" aria-describedby="skinThicknessStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" />
-      <span data-th-classappend="${#fields.hasErrors('skinThickness')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('skinThickness')}" aria-hidden="true"></span>
-      <span id="skinThickness-error" class="help-block" data-th-if="${#fields.hasErrors('skinThickness')}" data-th-errors="*{skinThickness}">Error message.</span>
-  </div>
-</div>
-<div class="form-group has-error has-feedback" data-z="5c73390a" id="consultation-insulin-field" data-th-classappend="${#fields.hasErrors('insulin')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="insulin" class="col-md-3 control-label" data-th-text="#{label_consultation_insulin}">insulin</label>
-  <div class="col-md-3">
-    <input id="insulin" name="insulin" data-th-value="*{{insulin}}" type="text" class="form-control inputmask" placeholder="insulin" data-th-placeholder="#{label_consultation_insulin}" data-toggle="tooltip" aria-describedby="insulinStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" />
-      <span data-th-classappend="${#fields.hasErrors('insulin')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('insulin')}" aria-hidden="true"></span>
-      <span id="insulin-error" class="help-block" data-th-if="${#fields.hasErrors('insulin')}" data-th-errors="*{insulin}">Error message.</span>
-  </div>
-</div>
 <div class="form-group has-error has-feedback" data-z="d0de40a" id="consultation-bmi-field" data-th-classappend="${#fields.hasErrors('bmi')}? 'has-error has-feedback'" data-th-class="form-group">
   <label for="bmi" class="col-md-3 control-label" data-th-text="#{label_consultation_bmi}">bmi</label>
   <div class="col-md-3">
@@ -108,15 +68,57 @@
       <span id="diabetesPedigreeFunction-error" class="help-block" data-th-if="${#fields.hasErrors('diabetesPedigreeFunction')}" data-th-errors="*{diabetesPedigreeFunction}">Error message.</span>
   </div>
 </div>
+                      
+<div class="form-group has-error has-feedback" data-z="a2f81b6a" id="consultation-pregnancies-field" data-th-classappend="${#fields.hasErrors('pregnancies')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="pregnancies" class="col-md-3 control-label" data-th-text="#{label_consultation_pregnancies}">pregnancies</label>
+  <div class="col-md-3">
+    <input id="pregnancies" name="pregnancies" data-th-value="*{{pregnancies}}" type="text" class="form-control inputmask" placeholder="pregnancies" data-th-placeholder="#{label_consultation_pregnancies}" data-toggle="tooltip" aria-describedby="pregnanciesStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />
+      <span data-th-classappend="${#fields.hasErrors('pregnancies')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('pregnancies')}" aria-hidden="true"></span>
+      <span id="pregnancies-error" class="help-block" data-th-if="${#fields.hasErrors('pregnancies')}" data-th-errors="*{pregnancies}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="784aa88a" id="consultation-glucose-field" data-th-classappend="${#fields.hasErrors('glucose')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="glucose" class="col-md-3 control-label" data-th-text="#{label_consultation_glucose}">glucose</label>
+  <div class="col-md-3">
+    <input id="glucose" name="glucose" data-th-value="*{{glucose}}" type="text" class="form-control inputmask" placeholder="glucose" data-th-placeholder="#{label_consultation_glucose}" data-toggle="tooltip" aria-describedby="glucoseStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />
+      <span data-th-classappend="${#fields.hasErrors('glucose')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('glucose')}" aria-hidden="true"></span>
+      <span id="glucose-error" class="help-block" data-th-if="${#fields.hasErrors('glucose')}" data-th-errors="*{glucose}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="a08c224a" id="consultation-bloodpressure-field" data-th-classappend="${#fields.hasErrors('bloodPressure')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="bloodPressure" class="col-md-3 control-label" data-th-text="#{label_consultation_bloodpressure}">bloodPressure</label>
+  <div class="col-md-3">
+    <input id="bloodPressure" name="bloodPressure" data-th-value="*{{bloodPressure}}" type="text" class="form-control inputmask" placeholder="bloodPressure" data-th-placeholder="#{label_consultation_bloodpressure}" data-toggle="tooltip" aria-describedby="bloodPressureStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />
+      <span data-th-classappend="${#fields.hasErrors('bloodPressure')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('bloodPressure')}" aria-hidden="true"></span>
+      <span id="bloodPressure-error" class="help-block" data-th-if="${#fields.hasErrors('bloodPressure')}" data-th-errors="*{bloodPressure}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="cb3fc30a" id="consultation-skinthickness-field" data-th-classappend="${#fields.hasErrors('skinThickness')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="skinThickness" class="col-md-3 control-label" data-th-text="#{label_consultation_skinthickness}">skinThickness</label>
+  <div class="col-md-3">
+    <input id="skinThickness" name="skinThickness" data-th-value="*{{skinThickness}}" type="text" class="form-control inputmask" placeholder="skinThickness" data-th-placeholder="#{label_consultation_skinthickness}" data-toggle="tooltip" aria-describedby="skinThicknessStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />
+      <span data-th-classappend="${#fields.hasErrors('skinThickness')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('skinThickness')}" aria-hidden="true"></span>
+      <span id="skinThickness-error" class="help-block" data-th-if="${#fields.hasErrors('skinThickness')}" data-th-errors="*{skinThickness}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="5c73390a" id="consultation-insulin-field" data-th-classappend="${#fields.hasErrors('insulin')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="insulin" class="col-md-3 control-label" data-th-text="#{label_consultation_insulin}">insulin</label>
+  <div class="col-md-3">
+    <input id="insulin" name="insulin" data-th-value="*{{insulin}}" type="text" class="form-control inputmask" placeholder="insulin" data-th-placeholder="#{label_consultation_insulin}" data-toggle="tooltip" aria-describedby="insulinStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />
+      <span data-th-classappend="${#fields.hasErrors('insulin')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('insulin')}" aria-hidden="true"></span>
+      <span id="insulin-error" class="help-block" data-th-if="${#fields.hasErrors('insulin')}" data-th-errors="*{insulin}">Error message.</span>
+  </div>
+</div>
 <div class="form-group has-error has-feedback" data-z="cfc77ea" id="consultation-age-field" data-th-classappend="${#fields.hasErrors('age')}? 'has-error has-feedback'" data-th-class="form-group">
   <label for="age" class="col-md-3 control-label" data-th-text="#{label_consultation_age}">age</label>
   <div class="col-md-3">
-    <input id="age" name="age" data-th-value="*{{age}}" type="text" class="form-control inputmask" placeholder="age" data-th-placeholder="#{label_consultation_age}" data-toggle="tooltip" aria-describedby="ageStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" />
+    <input id="age" name="age" data-th-value="*{{age}}" type="text" class="form-control inputmask" placeholder="age" data-th-placeholder="#{label_consultation_age}" data-toggle="tooltip" aria-describedby="ageStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />
       <span data-th-classappend="${#fields.hasErrors('age')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('age')}" aria-hidden="true"></span>
       <span id="age-error" class="help-block" data-th-if="${#fields.hasErrors('age')}" data-th-errors="*{age}">Error message.</span>
   </div>
 </div>
-                      <div class="form-group has-error has-feedback" data-z="user-managed" id="consultation-prediction-field" data-th-classappend="${#fields.hasErrors('prediction')}? 'has-error has-feedback'" data-th-class="form-group">
+
+<div class="form-group has-error has-feedback" data-z="user-managed" id="consultation-prediction-field" data-th-classappend="${#fields.hasErrors('prediction')}? 'has-error has-feedback'" data-th-class="form-group">
   <label for="prediction" class="col-md-3 control-label" data-th-text="#{label_consultation_prediction}">prediction</label>
   <div class="col-md-3">
     <input id="prediction" name="prediction" disabled="" data-th-value="*{{prediction}}" type="text" class="form-control inputmask" placeholder="prediction" data-th-placeholder="#{label_consultation_prediction}" data-toggle="tooltip" aria-describedby="predictionStatus" data-inputmask-alias="numeric" data-inputmask-digits="2" />

@@ -37,6 +37,24 @@ privileged aspect ConsultationRepositoryImpl_Roo_Jpa_Repository_Impl {
      * TODO Auto-generated attribute documentation
      * 
      */
+    public static final String ConsultationRepositoryImpl.BMI = "bmi";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String ConsultationRepositoryImpl.DIABETES_PEDIGREE_FUNCTION = "diabetesPedigreeFunction";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
+    public static final String ConsultationRepositoryImpl.PREDICTION = "prediction";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
     public static final String ConsultationRepositoryImpl.PREGNANCIES = "pregnancies";
     
     /**
@@ -67,25 +85,7 @@ privileged aspect ConsultationRepositoryImpl_Roo_Jpa_Repository_Impl {
      * TODO Auto-generated attribute documentation
      * 
      */
-    public static final String ConsultationRepositoryImpl.BMI = "bmi";
-    
-    /**
-     * TODO Auto-generated attribute documentation
-     * 
-     */
-    public static final String ConsultationRepositoryImpl.DIABETES_PEDIGREE_FUNCTION = "diabetesPedigreeFunction";
-    
-    /**
-     * TODO Auto-generated attribute documentation
-     * 
-     */
     public static final String ConsultationRepositoryImpl.AGE = "age";
-    
-    /**
-     * TODO Auto-generated attribute documentation
-     * 
-     */
-    public static final String ConsultationRepositoryImpl.PREDICTION = "prediction";
     
     /**
      * TODO Auto-generated method documentation
@@ -100,21 +100,21 @@ privileged aspect ConsultationRepositoryImpl_Roo_Jpa_Repository_Impl {
         
         JPQLQuery<Consultation> query = from(consultation);
         
-        Path<?>[] paths = new Path<?>[] {consultation.patient,consultation.consultationDate,consultation.pregnancies,consultation.glucose,consultation.bloodPressure,consultation.skinThickness,consultation.insulin,consultation.bmi,consultation.diabetesPedigreeFunction,consultation.age,consultation.prediction};        
+        Path<?>[] paths = new Path<?>[] {consultation.patient,consultation.consultationDate,consultation.bmi,consultation.diabetesPedigreeFunction,consultation.prediction,consultation.pregnancies,consultation.glucose,consultation.bloodPressure,consultation.skinThickness,consultation.insulin,consultation.age};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
 			.map(PATIENT, consultation.patient)
 			.map(CONSULTATION_DATE, consultation.consultationDate)
+			.map(BMI, consultation.bmi)
+			.map(DIABETES_PEDIGREE_FUNCTION, consultation.diabetesPedigreeFunction)
+			.map(PREDICTION, consultation.prediction)
 			.map(PREGNANCIES, consultation.pregnancies)
 			.map(GLUCOSE, consultation.glucose)
 			.map(BLOOD_PRESSURE, consultation.bloodPressure)
 			.map(SKIN_THICKNESS, consultation.skinThickness)
 			.map(INSULIN, consultation.insulin)
-			.map(BMI, consultation.bmi)
-			.map(DIABETES_PEDIGREE_FUNCTION, consultation.diabetesPedigreeFunction)
-			.map(AGE, consultation.age)
-			.map(PREDICTION, consultation.prediction);
+			.map(AGE, consultation.age);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);
@@ -136,7 +136,7 @@ privileged aspect ConsultationRepositoryImpl_Roo_Jpa_Repository_Impl {
         
         JPQLQuery<Consultation> query = from(consultation);
         
-        Path<?>[] paths = new Path<?>[] {consultation.patient,consultation.consultationDate,consultation.pregnancies,consultation.glucose,consultation.bloodPressure,consultation.skinThickness,consultation.insulin,consultation.bmi,consultation.diabetesPedigreeFunction,consultation.age,consultation.prediction};        
+        Path<?>[] paths = new Path<?>[] {consultation.patient,consultation.consultationDate,consultation.bmi,consultation.diabetesPedigreeFunction,consultation.prediction,consultation.pregnancies,consultation.glucose,consultation.bloodPressure,consultation.skinThickness,consultation.insulin,consultation.age};        
         applyGlobalSearch(globalSearch, query, paths);
         
         // Also, filter by the provided ids
@@ -145,15 +145,15 @@ privileged aspect ConsultationRepositoryImpl_Roo_Jpa_Repository_Impl {
         AttributeMappingBuilder mapping = buildMapper()
 			.map(PATIENT, consultation.patient)
 			.map(CONSULTATION_DATE, consultation.consultationDate)
+			.map(BMI, consultation.bmi)
+			.map(DIABETES_PEDIGREE_FUNCTION, consultation.diabetesPedigreeFunction)
+			.map(PREDICTION, consultation.prediction)
 			.map(PREGNANCIES, consultation.pregnancies)
 			.map(GLUCOSE, consultation.glucose)
 			.map(BLOOD_PRESSURE, consultation.bloodPressure)
 			.map(SKIN_THICKNESS, consultation.skinThickness)
 			.map(INSULIN, consultation.insulin)
-			.map(BMI, consultation.bmi)
-			.map(DIABETES_PEDIGREE_FUNCTION, consultation.diabetesPedigreeFunction)
-			.map(AGE, consultation.age)
-			.map(PREDICTION, consultation.prediction);
+			.map(AGE, consultation.age);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);
@@ -178,21 +178,21 @@ privileged aspect ConsultationRepositoryImpl_Roo_Jpa_Repository_Impl {
         Assert.notNull(patient, "patient is required");
         
         query.where(consultation.patient.eq(patient));
-        Path<?>[] paths = new Path<?>[] {consultation.patient,consultation.consultationDate,consultation.pregnancies,consultation.glucose,consultation.bloodPressure,consultation.skinThickness,consultation.insulin,consultation.bmi,consultation.diabetesPedigreeFunction,consultation.age,consultation.prediction};        
+        Path<?>[] paths = new Path<?>[] {consultation.patient,consultation.consultationDate,consultation.bmi,consultation.diabetesPedigreeFunction,consultation.prediction,consultation.pregnancies,consultation.glucose,consultation.bloodPressure,consultation.skinThickness,consultation.insulin,consultation.age};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
 			.map(PATIENT, consultation.patient)
 			.map(CONSULTATION_DATE, consultation.consultationDate)
+			.map(BMI, consultation.bmi)
+			.map(DIABETES_PEDIGREE_FUNCTION, consultation.diabetesPedigreeFunction)
+			.map(PREDICTION, consultation.prediction)
 			.map(PREGNANCIES, consultation.pregnancies)
 			.map(GLUCOSE, consultation.glucose)
 			.map(BLOOD_PRESSURE, consultation.bloodPressure)
 			.map(SKIN_THICKNESS, consultation.skinThickness)
 			.map(INSULIN, consultation.insulin)
-			.map(BMI, consultation.bmi)
-			.map(DIABETES_PEDIGREE_FUNCTION, consultation.diabetesPedigreeFunction)
-			.map(AGE, consultation.age)
-			.map(PREDICTION, consultation.prediction);
+			.map(AGE, consultation.age);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);

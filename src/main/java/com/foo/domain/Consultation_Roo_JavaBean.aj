@@ -91,67 +91,6 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-        
-    /**
-     * Sets pregnancies value
-     * 
-     * @param pregnancies
-     * @return Consultation
-     */
-    public Consultation Consultation.setPregnancies(Integer pregnancies) {
-        this.pregnancies = pregnancies;
-        return this;
-    }
-    
-        
-    /**
-     * Sets glucose value
-     * 
-     * @param glucose
-     * @return Consultation
-     */
-    public Consultation Consultation.setGlucose(Integer glucose) {
-        this.glucose = glucose;
-        return this;
-    }
-    
-        
-    /**
-     * Sets bloodPressure value
-     * 
-     * @param bloodPressure
-     * @return Consultation
-     */
-    public Consultation Consultation.setBloodPressure(Integer bloodPressure) {
-        this.bloodPressure = bloodPressure;
-        return this;
-    }
-    
-        
-    /**
-     * Sets skinThickness value
-     * 
-     * @param skinThickness
-     * @return Consultation
-     */
-    public Consultation Consultation.setSkinThickness(Integer skinThickness) {
-        this.skinThickness = skinThickness;
-        return this;
-    }
-    
-        
-    /**
-     * Sets insulin value
-     * 
-     * @param insulin
-     * @return Consultation
-     */
-    public Consultation Consultation.setInsulin(Integer insulin) {
-        this.insulin = insulin;
-        return this;
-    }
-    
-        
     /**
      * Sets bmi value
      * 
@@ -163,7 +102,6 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-        
     /**
      * Sets diabetesPedigreeFunction value
      * 
@@ -175,18 +113,6 @@ privileged aspect Consultation_Roo_JavaBean {
         return this;
     }
     
-        
-    /**
-     * Sets age value
-     * 
-     * @param age
-     * @return Consultation
-     */
-    public Consultation Consultation.setAge(Integer age) {
-        this.age = age;
-        return this;
-    }
-    
     /**
      * Gets prediction value
      * 
@@ -194,6 +120,72 @@ privileged aspect Consultation_Roo_JavaBean {
      */
     public BigDecimal Consultation.getPrediction() {
         return this.prediction;
+    }
+    
+    /**
+     * Sets pregnancies value
+     * 
+     * @param pregnancies
+     * @return Consultation
+     */
+    public Consultation Consultation.setPregnancies(BigDecimal pregnancies) {
+        this.pregnancies = pregnancies;
+        return this;
+    }
+    
+    /**
+     * Sets glucose value
+     * 
+     * @param glucose
+     * @return Consultation
+     */
+    public Consultation Consultation.setGlucose(BigDecimal glucose) {
+        this.glucose = glucose;
+        return this;
+    }
+    
+    /**
+     * Sets bloodPressure value
+     * 
+     * @param bloodPressure
+     * @return Consultation
+     */
+    public Consultation Consultation.setBloodPressure(BigDecimal bloodPressure) {
+        this.bloodPressure = bloodPressure;
+        return this;
+    }
+    
+    /**
+     * Sets skinThickness value
+     * 
+     * @param skinThickness
+     * @return Consultation
+     */
+    public Consultation Consultation.setSkinThickness(BigDecimal skinThickness) {
+        this.skinThickness = skinThickness;
+        return this;
+    }
+    
+    /**
+     * Sets insulin value
+     * 
+     * @param insulin
+     * @return Consultation
+     */
+    public Consultation Consultation.setInsulin(BigDecimal insulin) {
+        this.insulin = insulin;
+        return this;
+    }
+    
+    /**
+     * Sets age value
+     * 
+     * @param age
+     * @return Consultation
+     */
+    public Consultation Consultation.setAge(BigDecimal age) {
+        this.age = age;
+        return this;
     }
     
     /**
@@ -236,15 +228,15 @@ privileged aspect Consultation_Roo_JavaBean {
                 "id='" + id + '\'' + 
                 ", version='" + version + '\'' + 
                 ", consultationDate='" + consultationDate == null ? null : java.text.DateFormat.getDateTimeInstance().format(consultationDate.getTime()) + '\'' + 
+                ", bmi='" + bmi + '\'' + 
+                ", diabetesPedigreeFunction='" + diabetesPedigreeFunction + '\'' + 
+                ", prediction='" + prediction + '\'' + 
                 ", pregnancies='" + pregnancies + '\'' + 
                 ", glucose='" + glucose + '\'' + 
                 ", bloodPressure='" + bloodPressure + '\'' + 
                 ", skinThickness='" + skinThickness + '\'' + 
                 ", insulin='" + insulin + '\'' + 
-                ", bmi='" + bmi + '\'' + 
-                ", diabetesPedigreeFunction='" + diabetesPedigreeFunction + '\'' + 
-                ", age='" + age + '\'' + 
-                ", prediction='" + prediction + '\'' + "}" + super.toString();
+                ", age='" + age + '\'' + "}" + super.toString();
     }
     
 }

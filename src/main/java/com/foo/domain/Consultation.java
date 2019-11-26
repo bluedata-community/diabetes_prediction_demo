@@ -67,41 +67,6 @@ public class Consultation {
      *
      */
     @NumberFormat
-    private Integer pregnancies;
-
-    /**
-     * TODO Auto-generated attribute documentation
-     *
-     */
-    @NumberFormat
-    private Integer glucose;
-
-    /**
-     * TODO Auto-generated attribute documentation
-     *
-     */
-    @NumberFormat
-    private Integer bloodPressure;
-
-    /**
-     * TODO Auto-generated attribute documentation
-     *
-     */
-    @NumberFormat
-    private Integer skinThickness;
-
-    /**
-     * TODO Auto-generated attribute documentation
-     *
-     */
-    @NumberFormat
-    private Integer insulin;
-
-    /**
-     * TODO Auto-generated attribute documentation
-     *
-     */
-    @NumberFormat
     private BigDecimal bmi;
 
     /**
@@ -109,14 +74,7 @@ public class Consultation {
      *
      */
     @NumberFormat
-	private BigDecimal diabetesPedigreeFunction;
-
-    /**
-     * TODO Auto-generated attribute documentation
-     *
-     */
-    @NumberFormat
-    private Integer age;
+    private BigDecimal diabetesPedigreeFunction;
 
     /**
      * TODO Auto-generated attribute documentation
@@ -125,9 +83,9 @@ public class Consultation {
     @NumberFormat
     private BigDecimal prediction;
 
-	/**
+    /**
      * Sets prediction value
-     * 
+     *
      * @param prediction
      * @return Consultation
      */
@@ -136,75 +94,117 @@ public class Consultation {
         return this;
     }
 
-	/**
+    /**
      * Gets age value
-     * 
-     * @return Integer
+     *
+     * @return BigDecimal
      */
-    public Integer getAge() {
+    public BigDecimal getAge() {
         return this.age;
     }
 
-	/**
+    /**
      * Gets diabetesPedigreeFunction value
-     * 
+     *
      * @return BigDecimal
      */
     public BigDecimal getDiabetesPedigreeFunction() {
         return this.diabetesPedigreeFunction;
     }
 
-	/**
+    /**
      * Gets insulin value
-     * 
-     * @return Integer
+     *
+     * @return BigDecimal
      */
-    public Integer getInsulin() {
+    public BigDecimal getInsulin() {
         return this.insulin;
     }
 
-	/**
+    /**
      * Gets skinThickness value
-     * 
-     * @return Integer
+     *
+     * @return BigDecimal
      */
-    public Integer getSkinThickness() {
+    public BigDecimal getSkinThickness() {
         return this.skinThickness;
     }
 
-	/**
+    /**
      * Gets glucose value
-     * 
-     * @return Integer
+     *
+     * @return BigDecimal
      */
-    public Integer getGlucose() {
+    public BigDecimal getGlucose() {
         return this.glucose;
     }
 
-	/**
+    /**
      * Gets pregnancies value
-     * 
-     * @return Integer
+     *
+     * @return BigDecimal
      */
-    public Integer getPregnancies() {
+    public BigDecimal getPregnancies() {
         return this.pregnancies;
     }
 
-	/**
+    /**
      * Gets bmi value
-     * 
+     *
      * @return BigDecimal
      */
     public BigDecimal getBmi() {
         return this.bmi;
     }
 
-	/**
+    /**
      * Gets bloodPressure value
-     * 
-     * @return Integer
+     *
+     * @return BigDecimal
      */
-    public Integer getBloodPressure() {
+    public BigDecimal getBloodPressure() {
         return this.bloodPressure;
     }
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal pregnancies;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal glucose;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal bloodPressure;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal skinThickness;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal insulin;
+
+    /**
+     * TODO Auto-generated attribute documentation
+     *
+     */
+    @NumberFormat
+    private BigDecimal age;
 }
