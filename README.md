@@ -43,8 +43,8 @@ sudo systemctl restart db-demo-app
 You can check the webapp service status:
 
 ```
-curl http://localhost:8080/health
-# should return {"status":"UP" ...}
+sleep 10                           # wait for service to start
+curl http://localhost:8080/health  # should return {"status":"UP" ...}
 ```
 
 On the BlueData Centos 7 cluster screen, click **Add a cluster service**:
