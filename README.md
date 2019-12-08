@@ -6,12 +6,17 @@
 - ssh into the centos cluster as an admin user and run:
 
 ```
-sudo yum -y install java-1.8.0-openjdk
-sudo wget -O /home/bluedata/db-demo-app-exec.jar https://github.com/snowch/diabetes_prediction_demo/releases/latest/download/db-demo-app-exec.jar
+# !!! Change these to reflect your environment !!!
 
-# Change these to reflect your environment
 export BLUEDATA_MLOPS_URI=http://deployment_host:deployment_port/model_name/model_version/predict
 export BLUEDATA_MLOPS_XAUTHTOKEN=your_token
+```
+
+then run the following:
+
+```
+sudo yum -y install java-1.8.0-openjdk
+sudo wget -O /home/bluedata/db-demo-app-exec.jar https://github.com/snowch/diabetes_prediction_demo/releases/latest/download/db-demo-app-exec.jar
 
 # Create a system service to automatically restart the service on failure
 sudo bash -c "cat >/etc/systemd/system/db-demo-app.service" <<EOF
