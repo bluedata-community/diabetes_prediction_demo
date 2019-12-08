@@ -37,6 +37,7 @@ EOF
 
 sudo systemctl start db-demo-app
 sudo systemctl enable db-demo-app
+sudo systemctl restart db-demo-app
 ```
 
 On the BlueData Centos 7 cluster screen, click **Add a cluster service**:
