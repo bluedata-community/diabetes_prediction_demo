@@ -6,7 +6,7 @@
 - ssh into the centos cluster as an admin user and run:
 
 ```
-sudo yum install java-1.8.0-openjdk
+sudo yum -y install java-1.8.0-openjdk
 sudo wget -O /home/bluedata/db-demo-app-exec.jar https://github.com/snowch/diabetes_prediction_demo/releases/latest/download/db-demo-app-exec.jar
 
 # Change these to reflect your environment
