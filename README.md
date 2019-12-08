@@ -7,12 +7,31 @@
 
 ```
 sudo yum install java-1.8.0-openjdk
-wget https://github.com/snowch/diabetes_prediction_demo/releases/latest/download/db-demo-app-exec.jar
+sudo wget -O /home/bluedata/db-demo-app-exec.jar https://github.com/snowch/diabetes_prediction_demo/releases/latest/download/db-demo-app-exec.jar
 
-export BLUEDATA_MLOPS_URI=http://host:port/model_name/model_version/predict
+# Change these to reflect your environment
+export BLUEDATA_MLOPS_URI=http://deployment_host:deployment_port/model_name/model_version/predict
 export BLUEDATA_MLOPS_XAUTHTOKEN=your_token
 
-nohup java -Dbluedata.mlops.uri=$BLUEDATA_MLOPS_URI -Dbluedata.mlops.xauthtoken=$BLUEDATA_MLOPS_XAUTHTOKEN -jar db-demo-app-exec.jar &
+# Create a system service to automatically restart the service on failure
+sudo bash -c "cat >/etc/systemd/system/db-demo-app.service" <<EOF
+[Unit]
+Description=Diabetes Demo App
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=bluedata
+ExecStart=/usr/bin/java -Dbluedata.mlops.uri=$BLUEDATA_MLOPS_URI -Dbluedata.mlops.xauthtoken=$BLUEDATA_MLOPS_XAUTHTOKEN -jar /home/bluedata/db-demo-app-exec.jar
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl start db-demo-app
+sudo systemctl enable db-demo-app
 ```
 
 On the BlueData Centos 7 cluster screen, click **Add a cluster service**:
