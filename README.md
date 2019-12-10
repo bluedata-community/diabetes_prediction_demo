@@ -12,7 +12,7 @@ export BLUEDATA_MLOPS_URI=http://deployment_host:deployment_port/model_name/mode
 export BLUEDATA_MLOPS_XAUTHTOKEN=your_token
 ```
 
-then run the following on the centos cluster:
+then in the same ssh session, run the following on the centos cluster:
 
 ```
 sudo yum -y install java-1.8.0-openjdk
