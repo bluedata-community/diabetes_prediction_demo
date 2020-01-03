@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/snowch/diabetes_prediction_demo.svg?branch=master)](https://travis-ci.org/snowch/diabetes_prediction_demo)
+
 ## Usage
 
 ### Ensure your Diabetes_Scoring.py script returns a computer readable value
