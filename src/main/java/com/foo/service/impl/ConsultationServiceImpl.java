@@ -102,7 +102,7 @@ public class ConsultationServiceImpl implements ConsultationService {
 	        	String output = JsonPath.parse(result.getBody()).read("output");
 			output = output.replaceAll("Chances of having diabetes: ", "");
 			output = output.replaceAll("%", "");
-			output = output.replaceAll("\\s+","")
+			output = output.replaceAll("\\s+","");
 	        	return new BigDecimal(output);
 	        } catch (Exception e) {
 	    		e.printStackTrace();
