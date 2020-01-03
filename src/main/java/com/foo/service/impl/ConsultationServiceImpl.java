@@ -100,7 +100,10 @@ public class ConsultationServiceImpl implements ConsultationService {
 	        
 	        try {
 	        	String output = JsonPath.parse(result.getBody()).read("output");
-	        	return new BigDecimal(output.replaceAll("\\s+",""));
+			output = output.replaceAll("Chances of having diabetes: ", "");
+			output = output.replaceAll("%", "");
+			output = output.replaceAll("\\s+","")
+	        	return new BigDecimal(output);
 	        } catch (Exception e) {
 	    		e.printStackTrace();
 	    		return BigDecimal.valueOf(-1);
