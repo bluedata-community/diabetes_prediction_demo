@@ -1,5 +1,19 @@
 ## Usage
 
+### Ensure your Diabetes_Scoring.py script returns a computer readable value
+
+The original demo scripts returns a human readable value, i.e.
+
+```
+print("Chances of having diabetes: " + str(pred) + "%")
+```
+
+This application expects a computer readable value, i.e.
+
+print(str(pred))
+
+See [./Diabetes_Scoring.py](./Diabetes_Scoring.py) 
+
 ### Deploying app on BlueData
 
 - Provision a Centos 7 cluster
