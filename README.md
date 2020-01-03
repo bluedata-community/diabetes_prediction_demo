@@ -10,7 +10,9 @@ print("Chances of having diabetes: " + str(pred) + "%")
 
 This application expects a computer readable value, i.e.
 
+```
 print(str(pred))
+```
 
 See [./Diabetes_Scoring.py](./Diabetes_Scoring.py) 
 
