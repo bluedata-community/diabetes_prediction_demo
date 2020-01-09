@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/snowch/diabetes_prediction_demo.svg?branch=master)](https://travis-ci.org/snowch/diabetes_prediction_demo)
+[![Build Status](https://travis-ci.org/bluedata-community/diabetes_prediction_demo.svg?branch=master)](https://travis-ci.org/bluedata-community/diabetes_prediction_demo)
 
 ## Usage
 
