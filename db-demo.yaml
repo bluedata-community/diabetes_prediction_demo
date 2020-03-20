@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: db-demo-app
+  name: db-demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-demo-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: db-demo-app
+    spec:
+      containers:
+      - image: snowch/db-demo:latest
+        name: db-demo
+        resources: {}
+        env:
+        - name: BLUEDATA_MLOPS_URI
+          value: http://localhost
+        - name: BLUEDATA_MLOPS_XAUTHTOKEN
+          value: abc
+        ports:
+        - containerPort: 8080
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-demo-service
+spec:
+  selector:
+    app: db-demo-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
